@@ -63,10 +63,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114230831923080080, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114230831923080080, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
       propertyPath: jumpTakeOffSpeed
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114230831923080080, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -93,7 +99,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1208144871472054, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6768129033191218482}
+      addedObject: {fileID: 6334451972451839371}
   m_SourcePrefab: {fileID: 100100000, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
 --- !u!1 &2808170061863364406 stripped
 GameObject:
@@ -217,7 +223,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   TransitionStateInfoList: []
   m_Animator: {fileID: 2859279259891331470}
---- !u!114 &6768129033191218482
+--- !u!114 &6334451972451839371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,10 +232,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 2808170061863364406}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac35373b42abe46ea8f7cab1a1c353f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b027747850e84ba8bd84ea315a48b99, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Multiplayer.Center.NetcodeForGameObjectsExample::Unity.Multiplayer.Center.NetcodeForGameObjectsExample.SetColorBasedOnOwnerId
+  m_EditorClassIdentifier: Assembly-CSharp::Platformer.Mechanics.PlayerController_Netcode
   ShowTopMostFoldoutHeaderGroup: 1
+  minGroundNormalY: 0.9
+  gravityModifier: 1
+  velocity: {x: 0, y: 0}
+  jumpAudio: {fileID: 8300000, guid: 67975c08d56ceb147bad38572d805aa8, type: 3}
+  respawnAudio: {fileID: 8300000, guid: e18959d46b63f3c4c8cc020a433cf848, type: 3}
+  ouchAudio: {fileID: 8300000, guid: 6c05149e5a2fba64ba172e25a61074b7, type: 3}
+  maxSpeed: 4
+  jumpTakeOffSpeed: 8
+  jumpState: 0
+  collider2d: {fileID: 0}
+  audioSource: {fileID: 0}
+  health: {fileID: 0}
+  controlEnabled: 1
+  clientNetworkAnimator: {fileID: -970829596424689345}
 --- !u!95 &2859279259891331470 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95391780594314510, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
