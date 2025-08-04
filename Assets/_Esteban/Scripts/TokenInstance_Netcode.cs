@@ -1,5 +1,6 @@
 using Platformer.Gameplay;
 using Unity.Netcode;
+using Unity.Netcode.Components;
 using UnityEngine;
 using static Platformer.Core.Simulation;
 
@@ -15,52 +16,62 @@ namespace Platformer.Mechanics
     public class TokenInstance_Netcode : NetworkBehaviour
     {
         public AudioClip tokenCollectAudio;
-        [Tooltip("If true, animation will start at a random position in the sequence.")]
-        public bool randomAnimationStartTime = false;
-        [Tooltip("List of frames that make up the animation.")]
-        public Sprite[] idleAnimation, collectedAnimation;
-
-        internal Sprite[] sprites = new Sprite[0];
-
-        internal SpriteRenderer _renderer;
-
-        //unique index which is assigned by the TokenController in a scene.
-        internal int tokenIndex = -1;
-        internal TokenController controller;
-        //active frame in animation, updated by the controller.
-        internal int frame = 0;
-        internal bool collected = false;
-
-        void Awake()
+        
+        [SerializeField]
+        private Animator animator;
+        
+        [SerializeField]
+        private NetworkAnimator networkAnimator;
+        
+        private NetworkVariable<bool> isCollected = new(
+            readPerm: NetworkVariableReadPermission.Everyone,
+            writePerm: NetworkVariableWritePermission.Owner,
+            value: false);
+        
+        public override void OnNetworkSpawn()
         {
-            _renderer = GetComponent<SpriteRenderer>();
-            if (randomAnimationStartTime)
-                frame = Random.Range(0, sprites.Length);
-            sprites = idleAnimation;
+            if (IsClient)
+            {
+                isCollected.OnValueChanged += OnIsCollectableCollected;   
+            }
+            
+            base.OnNetworkSpawn();
+        }
+
+        private void OnIsCollectableCollected(bool previousValue, bool newValue)
+        {
+            gameObject.SetActive(false);
         }
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            if(!IsOwner)
+            if(!IsServer)
                 return;
+
+            Debug.Log($"Triggered with {other.gameObject.name}");
             
             //only exectue OnPlayerEnter if the player collides with this token.
-            var player = other.gameObject.GetComponent<PlayerController>();
+            var player = other.gameObject.GetComponent<PlayerController_Netcode>();
             if (player != null)
                 OnPlayerEnter(player);
         }
 
-        void OnPlayerEnter(PlayerController player)
+        void OnPlayerEnter(PlayerController_Netcode player)
         {
-            if (collected)
+            if (isCollected.Value)
                 return;
             
-            //disable the gameObject and remove it from the controller update list.
-            frame = 0;
-            sprites = collectedAnimation;
-            if (controller != null)
-                collected = true;
+            networkAnimator.Animator.SetBool("isCollected", true);
             
+            //disable the gameObject and remove it from the controller update list.
+            isCollected.Value = true;
+            
+            PlayCollectedSoundRpc(RpcTarget.Single(player.NetworkObject.OwnerClientId, RpcTargetUse.Temp));
+        }
+
+        [Rpc(SendTo.SpecifiedInParams)]
+        void PlayCollectedSoundRpc(RpcParams clientRpcParams)
+        {
             //send an event into the gameplay system to perform some behaviour.
             AudioSource.PlayClipAtPoint(tokenCollectAudio, transform.position);
         }

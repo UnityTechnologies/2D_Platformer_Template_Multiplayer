@@ -63,7 +63,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Token_Netcode
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8138565357952929714, guid: 9dc721e1d0ba64d35b9cf98e3f6add80,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8138565357952929714, guid: 9dc721e1d0ba64d35b9cf98e3f6add80, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -75,6 +81,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5905820538644675820}
+    - targetCorrespondingSourceObject: {fileID: 3755218644691643138, guid: 9dc721e1d0ba64d35b9cf98e3f6add80,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6989506329318630760}
+    - targetCorrespondingSourceObject: {fileID: 3755218644691643138, guid: 9dc721e1d0ba64d35b9cf98e3f6add80,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -9113036993059825585}
   m_SourcePrefab: {fileID: 100100000, guid: 9dc721e1d0ba64d35b9cf98e3f6add80, type: 3}
 --- !u!1 &2043854804827566795 stripped
 GameObject:
@@ -129,3 +143,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6989506329318630760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043854804827566795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.Components.NetworkAnimator
+  ShowTopMostFoldoutHeaderGroup: 1
+  TransitionStateInfoList: []
+  m_Animator: {fileID: 5905820538644675820}
+--- !u!114 &-9113036993059825585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043854804827566795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d01c8a241d94df0a34eaa88ee628ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Platformer.Mechanics.TokenInstance_Netcode
+  ShowTopMostFoldoutHeaderGroup: 1
+  tokenCollectAudio: {fileID: 8300000, guid: bf527d825758e5b4ca7b69f5a02d9a56, type: 3}
+  animator: {fileID: 5905820538644675820}
+  networkAnimator: {fileID: -6989506329318630760}

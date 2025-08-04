@@ -85,10 +85,10 @@ namespace Platformer.Mechanics
 
         public override void OnNetworkSpawn()
         {
-            if (IsOwner)
-                return;
-
-            isFlipped.OnValueChanged += OnIsFlippedChanged;
+            if (!IsOwner)
+            {
+                isFlipped.OnValueChanged += OnIsFlippedChanged;
+            }
             
             base.OnNetworkSpawn();
         }
