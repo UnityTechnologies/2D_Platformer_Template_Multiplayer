@@ -66,7 +66,7 @@ namespace Platformer.Mechanics
             //disable the gameObject and remove it from the controller update list.
             isCollected.Value = true;
             
-            PlayCollectedSoundRpc(RpcTarget.Single(player.NetworkObject.OwnerClientId, RpcTargetUse.Temp));
+            //PlayCollectedSoundRpc(RpcTarget.Single(player.NetworkObject.OwnerClientId, RpcTargetUse.Temp));
         }
 
         [Rpc(SendTo.SpecifiedInParams)]
