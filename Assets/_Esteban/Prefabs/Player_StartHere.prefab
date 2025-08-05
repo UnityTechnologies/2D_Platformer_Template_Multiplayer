@@ -196,6 +196,11 @@ PrefabInstance:
       propertyPath: m_Time
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3054895990493919744, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_Emitting
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
