@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1208144871472054, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
       propertyPath: m_Name
-      value: Player_Offline
+      value: Player_StartHere
       objectReference: {fileID: 0}
     - target: {fileID: 1208144871472054, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
       propertyPath: m_Layer
@@ -78,7 +78,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 114230831923080080, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4520396350849616, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5789941418421485805}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1208144871472054, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
@@ -111,9 +115,101 @@ MonoBehaviour:
   ouchAudio: {fileID: 8300000, guid: 6c05149e5a2fba64ba172e25a61074b7, type: 3}
   maxSpeed: 4
   jumpTakeOffSpeed: 8
-  jumpState: 0
   collider2d: {fileID: 0}
   audioSource: {fileID: 0}
   health: {fileID: 0}
   controlEnabled: 1
+  trailRenderer: {fileID: 5789941419245543862}
   clientNetworkAnimator: {fileID: 0}
+  playerJumpState: 0
+--- !u!4 &4256394573203404449 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4520396350849616, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4251907220185085169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8808806385775287222
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4256394573203404449}
+    m_Modifications:
+    - target: {fileID: 3054895990239763289, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_Name
+      value: RainbowTrail
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054895990239763291, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054895990239763291, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054895990239763291, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054895990239763291, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054895990239763291, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054895990239763291, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054895990239763291, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054895990239763291, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054895990239763291, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054895990239763291, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054895990493919744, guid: 5c49c1613def9483585c222067115b32,
+        type: 3}
+      propertyPath: m_Time
+      value: 1.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c49c1613def9483585c222067115b32, type: 3}
+--- !u!4 &5789941418421485805 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3054895990239763291, guid: 5c49c1613def9483585c222067115b32,
+    type: 3}
+  m_PrefabInstance: {fileID: 8808806385775287222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &5789941419245543862 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 3054895990493919744, guid: 5c49c1613def9483585c222067115b32,
+    type: 3}
+  m_PrefabInstance: {fileID: 8808806385775287222}
+  m_PrefabAsset: {fileID: 0}
