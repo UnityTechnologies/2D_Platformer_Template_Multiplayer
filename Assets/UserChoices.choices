@@ -29,7 +29,7 @@ MonoBehaviour:
       - ClientServer
     - QuestionId: PlayerCount
       Answers:
-      - 4
+      - 2
   Preset: 11
   SelectedSolutions:
     SelectedHostingModel: 4

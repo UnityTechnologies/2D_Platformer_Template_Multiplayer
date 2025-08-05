@@ -163,11 +163,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
-      "version": "3.1.0",
+      "version": "3.1.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.splines": "2.0.0"
+        "com.unity.splines": "2.0.0",
+        "com.unity.modules.imgui": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -273,7 +274,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.14.0",
+      "version": "1.14.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -282,7 +283,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.learn.iet-framework": {
-      "version": "5.0.0",
+      "version": "5.0.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -598,7 +599,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.8.7",
+      "version": "1.8.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -630,7 +631,7 @@
       }
     },
     "com.unity.visualscripting": {
-      "version": "1.9.7",
+      "version": "1.9.8",
       "depth": 0,
       "source": "registry",
       "dependencies": {
