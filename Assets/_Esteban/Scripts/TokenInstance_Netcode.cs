@@ -45,7 +45,7 @@ namespace Platformer.Mechanics
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            if(!IsServer)
+            if(!IsOwner)
                 return;
 
             Debug.Log($"Triggered with {other.gameObject.name}");
