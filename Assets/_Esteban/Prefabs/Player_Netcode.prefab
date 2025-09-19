@@ -99,15 +99,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1208144871472054, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4793171653709426360}
-    - targetCorrespondingSourceObject: {fileID: 1208144871472054, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: -970829596424689345}
     - targetCorrespondingSourceObject: {fileID: 1208144871472054, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6334451972451839371}
+      addedObject: {fileID: 7165216721735074876}
+    - targetCorrespondingSourceObject: {fileID: 1208144871472054, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7263466935186918727}
   m_SourcePrefab: {fileID: 100100000, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
 --- !u!4 &2804856640939663056 stripped
 Transform:
@@ -209,19 +209,6 @@ MonoBehaviour:
   UseRigidBodyForMotion: 0
   AutoUpdateKinematicState: 1
   AutoSetKinematicOnDespawn: 1
---- !u!114 &4793171653709426360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2808170061863364406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9a5dfe17cf2c4388ba36dc0170da051, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HeyCameraLookAtMe_Netcode
-  ShowTopMostFoldoutHeaderGroup: 1
 --- !u!114 &-970829596424689345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +224,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   TransitionStateInfoList: []
   m_Animator: {fileID: 2859279259891331470}
---- !u!114 &6334451972451839371
+--- !u!114 &7165216721735074876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,9 +233,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 2808170061863364406}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b027747850e84ba8bd84ea315a48b99, type: 3}
+  m_Script: {fileID: 11500000, guid: c34efd09a8ed645a982b5b7acf642e32, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Platformer.Mechanics.PlayerController_Netcode
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+--- !u!114 &-7263466935186918727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2808170061863364406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad8ecdf17a33441f941274e56afa78a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   minGroundNormalY: 0.9
   gravityModifier: 1
