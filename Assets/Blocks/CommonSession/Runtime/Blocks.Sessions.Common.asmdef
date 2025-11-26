@@ -1,0 +1,30 @@
+{
+    "name": "Blocks.Sessions.Common",
+    "rootNamespace": "Blocks.Sessions.Common",
+    "references": [
+        "GUID:37e17ffe38d86ae48bc3207e83ffef88",
+        "GUID:510d22f9fb515c2299f915419086bb2b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "MULTIPLAYER_SERVICES_1_2_0_OR_NEWER"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.netcode.gameobjects",
+            "expression": "2.0.0",
+            "define": "GAMEOBJECTS_NETCODE_2_AVAILABLE"
+        },
+        {
+            "name": "com.unity.services.multiplayer",
+            "expression": "1.2.0",
+            "define": "MULTIPLAYER_SERVICES_1_2_0_OR_NEWER"
+        }
+    ],
+    "noEngineReferences": false
+}

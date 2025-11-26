@@ -1,0 +1,107 @@
+using System;
+using System.Runtime.CompilerServices;
+using Unity.Properties;
+using Unity.Services.Multiplayer;
+using UnityEngine.UIElements;
+
+namespace Blocks.Sessions.Common
+{
+    public class PlayerNameViewModel : INotifyBindablePropertyChanged, IDataSourceViewHashProvider, IDisposable
+    {
+        const string k_NoSession = "No Player Joined";
+
+        SessionObserver m_SessionObserver;
+        ISession m_Session;
+        long m_UpdateVersion;
+
+        /// <summary>
+        /// This property is bound to <see cref="PlayerNameLabel.text"/> so that the label displays the current
+        /// session name.
+        /// <summary>
+        [CreateProperty]
+        public string PlayerName
+        {
+            get => m_PlayerName;
+            set
+            {
+                if (m_PlayerName == value)
+                {
+                    return;
+                }
+
+                m_PlayerName = value;
+                ++m_UpdateVersion;
+                Notify();
+            }
+        }
+        string m_PlayerName = k_NoSession;
+
+        public PlayerNameViewModel(string sessionType)
+        {
+            m_SessionObserver = new SessionObserver(sessionType);
+            m_SessionObserver.SessionAdded += OnSessionAdded;
+
+            if (m_SessionObserver.Session != null)
+            {
+                OnSessionAdded(m_SessionObserver.Session);
+            }
+        }
+
+        void OnSessionAdded(ISession newSession)
+        {
+            m_Session = newSession;
+            m_Session.RemovedFromSession += OnSessionRemoved;
+            m_Session.Deleted += OnSessionRemoved;
+            m_Session.Changed += OnSessionChanged;
+            OnSessionChanged();
+        }
+
+        void OnSessionChanged()
+        {
+            PlayerName = m_Session.CurrentPlayer.GetPlayerName();
+        }
+
+        void OnSessionRemoved()
+        {
+            PlayerName = k_NoSession;
+            CleanupSession();
+        }
+
+        void CleanupSession()
+        {
+            m_Session.RemovedFromSession -= OnSessionRemoved;
+            m_Session.Deleted -= OnSessionRemoved;
+            m_Session.Changed -= OnSessionChanged;
+            m_Session = null;
+        }
+
+        public void Dispose()
+        {
+            if (m_SessionObserver != null)
+            {
+                m_SessionObserver.Dispose();
+                m_SessionObserver = null;
+            }
+
+            if (m_Session != null)
+            {
+                CleanupSession();
+            }
+        }
+
+        /// <summary>
+        /// This method is used by UIToolkit to determine if any data bound to the UI has changed.
+        /// Instead of hashing the data, an m_UpdateVersion counter is incremented when changes occur.
+        /// </summary>
+        public long GetViewHashCode() => m_UpdateVersion;
+
+        /// <summary>
+        /// Suggested implementation of INotifyBindablePropertyChanged from UIToolkit.
+        /// </summary>
+        public event EventHandler<BindablePropertyChangedEventArgs> propertyChanged;
+        void Notify([CallerMemberName] string property = null)
+        {
+            propertyChanged?.Invoke(this, new BindablePropertyChangedEventArgs(property));
+        }
+    }
+}

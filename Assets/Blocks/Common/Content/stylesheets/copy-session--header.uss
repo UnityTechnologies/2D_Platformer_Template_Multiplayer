@@ -1,0 +1,29 @@
+.blocks-copy-session--header {
+    width: auto;
+}
+
+.blocks-copy-session--header > .blocks-button {
+    background-image: url("../textures/icon_copy.png");
+    background-size: 16px 16px;
+    border-width: 0;
+    font-size: 0;
+    max-height: 16px;
+    min-width: 16px;
+    max-width: 16px;
+    padding: 0;
+}
+
+.blocks-copy-session--header > .blocks-textfield {
+    min-width: auto;
+    min-height: auto;
+    border-width: 0;
+    flex-grow: 0;
+    padding: 4px 2px 4px 1px;
+    margin: 4px 4px 2px 2px;
+}
+
+.blocks-copy-session--header > .blocks-textfield > .unity-base-field__input {
+    -unity-text-align: middle-right;
+    justify-content: flex-end;
+    padding: 0;
+}

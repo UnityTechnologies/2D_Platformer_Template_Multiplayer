@@ -1,0 +1,10 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement class="blocks-modal">
+        <engine:Label text="JOIN SESSION BY QUICKJOIN" class="blocks-header blocks-header--space-bottom blocks-header--sm"/>
+        <Blocks.Sessions.QuickJoinButton name="QuickJoinButton" enable-rich-text="false" quick-join-settings="../Settings/QuickJoinSettings.asset?fileID=11400000&amp;guid=342532e706f5ac34582e818ea7e1ae33&amp;type=2#QuickJoinSettings">
+            <Bindings>
+                <engine:DataBinding property="SessionSettings" binding-mode="ToTarget" data-source-path=""/>
+            </Bindings>
+        </Blocks.Sessions.QuickJoinButton>
+    </engine:VisualElement>
+</engine:UXML>

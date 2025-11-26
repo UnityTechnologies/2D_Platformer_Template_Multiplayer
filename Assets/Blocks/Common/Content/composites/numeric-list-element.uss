@@ -1,0 +1,30 @@
+.blocks-number-list-element{
+    flex-grow: 1;
+    flex-direction: row;
+    width: 100%;
+    -unity-text-align: middle-left;
+    border-bottom-color: var(--color-border);
+    border-width: var(--width-border-md);
+    height: var(--base-unit-lg);
+    min-width: 500px;
+}
+
+.current-user.blocks-number-list-element {
+    background-color: rgba(30,128,188,0.61);
+}
+
+.blocks-number-list-element__number{
+    font-size: var(--text-md);
+    -unity-font-style: bold;
+    width: var(--base-unit-xl);
+}
+
+.blocks-number-list-element__text{
+    font-size: var(--text-sm);
+}
+
+.blocks-number-list-element__right{
+    font-size: var(--text-sm);
+    margin-left: auto;
+    padding-left: var(--base-unit-md);
+}

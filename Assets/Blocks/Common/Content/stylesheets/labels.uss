@@ -1,0 +1,26 @@
+.blocks-label{
+    color: var(--color-default);
+}
+
+.blocks-header {
+    font-size: var(--text-lg);
+    -unity-font-style: bold;
+    color: var(--color-neutral);
+    -unity-text-align: middle-center;
+    padding: 0 var(--padding-lg);
+    margin: 0;
+    width: 100%;
+}
+
+.blocks-header--sm {
+    font-size: var(--text-md);
+}
+
+.blocks-header--xs {
+    font-size: var(--text-sm);
+}
+
+.blocks-header--space-bottom {
+    margin-bottom: var(--margin-xl);
+}
+

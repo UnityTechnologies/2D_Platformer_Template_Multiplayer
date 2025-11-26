@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 203f2c9355eb4514f9062db88d0512e1
+AssetOrigin:
+  serializedVersion: 1
+  productId: 341930
+  packageName: Unity Building Block - Multiplayer Session
+  packageVersion: 1.0
+  assetPath: Assets/Blocks/MultiplayerSession/Runtime/SessionBrowser/SessionBrowserElement.cs
+  uploadId: 814574

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 0486ed66e217eda44805ac20119a31f1
+AssetOrigin:
+  serializedVersion: 1
+  productId: 341930
+  packageName: Unity Building Block - Multiplayer Session
+  packageVersion: 1.0
+  assetPath: Assets/Blocks/MultiplayerSession/Runtime/QuickJoin/QuickJoinViewModel.cs
+  uploadId: 814574

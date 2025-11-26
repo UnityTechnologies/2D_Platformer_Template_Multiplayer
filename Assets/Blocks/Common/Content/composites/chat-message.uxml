@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="./chat-message.uss" />
+    <ui:VisualElement>
+        <ui:Label text="Robi" name="sender" class="headline-small chat-message__sender" />
+        <ui:Label text="Yes i really like what you are writing me here its awesome." name="message" class="chat-message__text blocks-chat-message__text" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,9 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement class="blocks-modal blocks-modal--left-aligned-text">
+        <Blocks.Sessions.Common.SessionInfoElement>
+            <Bindings>
+                <engine:DataBinding property="SessionType" data-source-path="sessionType" binding-mode="ToTarget"/>
+            </Bindings>
+        </Blocks.Sessions.Common.SessionInfoElement>
+    </engine:VisualElement>
+</engine:UXML>

@@ -1,0 +1,12 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="CurrentSession" src="../../../CommonSession/UI/CurrentSession.uxml?fileID=9197481963319205126&amp;guid=6a55f10912d74d3449f68f82c91df9d2&amp;type=3#CurrentSession"/>
+    <engine:Template name="JoinSessionByQuickJoin" src="../../UI/JoinSessionByQuickJoin.uxml?fileID=9197481963319205126&amp;guid=8d90af11efb27e942a4c9cc34f5d6162&amp;type=3#JoinSessionByQuickJoin"/>
+    <engine:Template name="SessionInfo" src="../../../CommonSession/UI/SessionInfo.uxml?fileID=9197481963319205126&amp;guid=23d191ee94bd3e249be3e6429d4e6220&amp;type=3#SessionInfo"/>
+    <engine:VisualElement data-source="../../Settings/SessionSettings.asset?fileID=11400000&amp;guid=0bf4e1684added44da254017c7fc41b2&amp;type=2#SessionSettings" class="blocks-debug-menu">
+        <engine:Instance template="SessionInfo" class="blocks-menu--left-panel"/>
+        <engine:VisualElement class="blocks-menu">
+            <engine:Instance template="JoinSessionByQuickJoin" class="blocks-element--space-bottom"/>
+            <engine:Instance template="CurrentSession"/>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

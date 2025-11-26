@@ -1,0 +1,47 @@
+.blocks-icon-triangle{
+    background-image: url("../textures/icon_triangle.png");
+}
+
+.blocks-icon-x{
+    background-image: url("../textures/icon_x.png");
+}
+
+.blocks-icon-arrow{
+    background-image: url("../textures/icon_triangle.png");
+}
+
+.blocks-reticle-cross{
+    background-image: url("../textures/reticle_cross.png");
+}
+
+.blocks-reticle-opencircular{
+    background-image: url("../textures/reticle_opencircular.png");
+}
+
+.blocks-reticle-tcross{
+    background-image: url("../textures/reticle_tcross.png");
+}
+
+.blocks-reticle-circularcross{
+    background-image: url("../textures/reticle_circularcross.png");
+}
+
+.blocks-icon-pistol{
+    background-image: url("../textures/icon_pistol.png");
+}
+
+.blocks-icon-shotgun{
+    background-image: url("../textures/icon_shotgun.png");
+}
+
+.blocks-icon-machinegun{
+    background-image: url("../textures/icon_machinegun.png");
+}
+
+.blocks-icon-rocketlauncher{
+    background-image: url("../textures/icon_rocketlauncher.png");
+}
+
+.blocks-icon-reload{
+    background-image: url("../textures/reticle_reload_circle.png");
+}

@@ -1,0 +1,20 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+        <engine:VisualElement class="blocks-modal">
+            <engine:Label text="JOIN SESSION BY CODE" class="blocks-header blocks-header--space-bottom blocks-header--sm"/>
+            <Blocks.Sessions.CreateSessionElement class="blocks-element--space-bottom">
+                <Bindings>
+                    <engine:DataBinding property="SessionSettings" binding-mode="ToTarget" data-source-path=""/>
+                </Bindings>
+            </Blocks.Sessions.CreateSessionElement>
+            <Blocks.Sessions.Common.CopySessionCodeElement class="blocks-element--space-bottom">
+                <Bindings>
+                    <engine:DataBinding property="SessionType" data-source-path="sessionType" binding-mode="ToTarget"/>
+                </Bindings>
+            </Blocks.Sessions.Common.CopySessionCodeElement>
+            <Blocks.Sessions.JoinSessionByCode class="blocks-element--space-bottom">
+                <Bindings>
+                    <engine:DataBinding property="SessionSettings" binding-mode="ToTarget" data-source-path=""/>
+                </Bindings>
+            </Blocks.Sessions.JoinSessionByCode>
+        </engine:VisualElement>
+</engine:UXML>

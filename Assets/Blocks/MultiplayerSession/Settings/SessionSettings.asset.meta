@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0bf4e1684added44da254017c7fc41b2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 341930
+  packageName: Unity Building Block - Multiplayer Session
+  packageVersion: 1.0
+  assetPath: Assets/Blocks/MultiplayerSession/Settings/SessionSettings.asset
+  uploadId: 814574

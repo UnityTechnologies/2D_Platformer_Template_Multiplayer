@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 342532e706f5ac34582e818ea7e1ae33
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 341930
+  packageName: Unity Building Block - Multiplayer Session
+  packageVersion: 1.0
+  assetPath: Assets/Blocks/MultiplayerSession/Settings/QuickJoinSettings.asset
+  uploadId: 814574

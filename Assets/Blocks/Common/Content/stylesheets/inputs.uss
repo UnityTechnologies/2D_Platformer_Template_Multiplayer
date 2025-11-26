@@ -1,0 +1,141 @@
+.blocks-textfield,
+.blocks-dropdown{
+    min-width: var(--width-min-input);
+    min-height: var(--base-unit-xl);
+    letter-spacing: var(--letterspacing-md);
+    border-radius: var(--radius-sm);
+    border-color: var(--color-neutral);
+    border-width: var(--width-border-md);
+    white-space: normal;
+    flex-grow: 1;
+}
+
+.blocks-textfield > .unity-base-field__input,
+.blocks-dropdown:hover:enabled > .unity-base-popup-field__input,
+.blocks-dropdown > .unity-base-popup-field__input,
+.blocks-dropdown:active:enabled > .unity-base-popup-field__input{
+    --unity-cursor-color: rgb(255, 255, 255);
+    background-color: transparent;
+    border-width: 0;
+    color: var(--color-default);
+    padding: var(--padding-md);
+}
+
+.blocks-textfield > .unity-base-text-field__input--placeholder {
+    color: var(--color-neutral);
+}
+
+.blocks-textfield > .unity-base-field__label,
+.blocks-dropdown > .unity-base-field__label{
+    display: none;
+}
+
+.blocks-dropdown > .unity-base-popup-field__input > .unity-base-popup-field__arrow{
+    background-image: url("../textures/icon_triangle.png");
+    width: var(--base-unit-md);
+    height: var(--base-unit-md);
+    margin-left: var( --margin-sm);
+    -unity-background-image-tint-color: var(--color-default);
+}
+
+.blocks-toggle {
+    align-items: center;
+}
+
+.blocks-toggle > .unity-toggle__label{
+    color: var(--color-active);
+    font-size: var( --text-xl);
+    align-items: center;
+    letter-spacing: var(--letterspacing-lg);
+    flex-grow: 1;
+}
+
+.blocks-toggle:checked > .unity-toggle__label,
+.blocks-toggle:focus:enabled > .unity-toggle__label {
+    color: var(--color-default);
+    font-size: var( --text-xl);
+    align-items: center;
+    letter-spacing: var(--letterspacing-lg);
+    flex-grow: 1;
+}
+
+.blocks-toggle > .unity-toggle__input{
+    margin-left: var( --margin-sm);
+    min-height: var(--base-unit-xl);
+    min-width: var(--base-unit-xxl);
+    max-width: var(--base-unit-xxl);
+    border-radius: var(--radius-lg);
+    border-color: darkgrey;
+    border-width: var(--width-border-md);
+}
+
+.blocks-toggle > .unity-toggle__input > .unity-toggle__checkmark{
+    transition: left 0.1s ease-in-out, scale 0.1s ease-in-out;
+    left: 8px;
+    min-width: var( --base-unit-lg);
+    min-height: var( --base-unit-lg);
+    background-color: var(--color-inactive);
+    background-image: none;
+    border-width: 0;
+    border-radius: var(--radius-sm);
+}
+
+.blocks-toggle:checked > .unity-toggle__input > .unity-toggle__checkmark{
+    scale: 1.2;
+    left: 48px;
+    background-color: var(--color-default);
+}
+
+.blocks-toggle > .unity-toggle__input:checked > .unity-toggle__checkmark,
+.blocks-toggle > .unity-toggle__input:focus:enabled:checked > .unity-toggle__checkmark,
+.blocks-toggle > .unity-toggle__input:hover:enabled:checked > .unity-toggle__checkmark{
+    background-image: none;
+}
+
+.blocks-toggle:focus:enabled > .unity-toggle__input,
+.blocks-textfield:focus,
+.blocks-dropdown:active:enabled,
+.blocks-dropdown:focus{
+    border-color: var(--color-default);
+}
+
+
+/* Unfortunately we have to style the global dropdown as it has no custom class
+   this is shown when the dropdown is open.
+*/
+
+.unity-base-dropdown__container-outer{
+    border-color: transparent;
+}
+
+.unity-base-dropdown__container-inner{
+    padding: 2px;
+    background-color: var(--color-card-background);
+    border-radius: var(--radius-sm);
+}
+
+.unity-base-dropdown__item{
+    margin: var(--base-unit-xs);
+    color: var(--color-inactive);
+}
+
+.unity-base-dropdown__item:hover:enabled{
+    background-color: var(--color-dropdown-selection-background);
+    border-radius: var(--radius-sm);
+}
+
+.unity-base-dropdown__item:checked:enabled{
+    background-color: var(--color-dropdown-selection-background);
+    border-radius: var(--radius-sm);
+    color: var(--color-default);
+}
+
+.unity-base-dropdown__item > .unity-base-dropdown__item-content > .unity-base-dropdown__checkmark{
+    display: none;
+}
+
+.unity-base-dropdown__item > .unity-base-dropdown__item-content > .unity-base-dropdown__label,
+.unity-base-dropdown__item:checked > .unity-base-dropdown__item-content > .unity-base-dropdown__label{
+    padding-left: var(--base-unit-xs);
+    padding-right: var(--base-unit-xs);
+}

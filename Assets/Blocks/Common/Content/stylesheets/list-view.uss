@@ -1,0 +1,4 @@
+.blocks-list-view--no-hover .unity-collection-view__item:hover
+{
+    background-color: transparent;
+}

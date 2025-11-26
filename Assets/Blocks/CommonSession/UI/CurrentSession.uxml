@@ -1,0 +1,50 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements"
+             xmlns:editor="UnityEditor.UIElements"
+             noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+             editor-extension-mode="False">
+    <engine:VisualElement class="blocks-modal">
+        <engine:VisualElement
+            class="blocks-container--horizontal blocks-container--space-between blocks-modal--left-aligned-text">
+            <Blocks.Sessions.Common.SessionNameLabel class="blocks-header blocks-element--space-right">
+                <Bindings>
+                    <engine:DataBinding property="SessionType" data-source-path="sessionType" binding-mode="ToTarget" />
+                </Bindings>
+            </Blocks.Sessions.Common.SessionNameLabel>
+            <Blocks.Sessions.Common.PlayerCountLabel>
+                <Bindings>
+                    <engine:DataBinding property="SessionType" binding-mode="ToTarget" data-source-path="sessionType" />
+                </Bindings>
+            </Blocks.Sessions.Common.PlayerCountLabel>
+        </engine:VisualElement>
+        <engine:VisualElement
+            class="blocks-container--horizontal blocks-container--space-between blocks-element--space-bottom blocks-modal--left-aligned-text">
+            <Blocks.Sessions.Common.PlayerNameLabel class="blocks-element--space-right blocks-header blocks-header--sm">
+                <Bindings>
+                    <engine:DataBinding property="SessionType" data-source-path="sessionType" binding-mode="ToTarget" />
+                </Bindings>
+            </Blocks.Sessions.Common.PlayerNameLabel>
+            <Blocks.Sessions.Common.CopySessionCodeElement class="blocks-copy-session--header">
+                <Bindings>
+                    <engine:DataBinding property="SessionType" data-source-path="sessionType" binding-mode="ToTarget" />
+                </Bindings>
+            </Blocks.Sessions.Common.CopySessionCodeElement>
+        </engine:VisualElement>
+        <Blocks.Sessions.Common.PlayerListViewElement class="blocks-element--space-bottom">
+            <Bindings>
+                <engine:DataBinding property="SessionType" data-source-path="sessionType" binding-mode="ToTarget" />
+            </Bindings>
+        </Blocks.Sessions.Common.PlayerListViewElement>
+        <Blocks.Sessions.Common.LeaveSessionButton>
+            <Bindings>
+                <engine:DataBinding property="SessionType" binding-mode="ToTarget" data-source-path="sessionType" />
+            </Bindings>
+        </Blocks.Sessions.Common.LeaveSessionButton>
+        <engine:VisualElement class="blocks-container--horizontal blocks-container--right">
+            <Blocks.Sessions.Common.SessionStatusLabel class="blocks-element--space-right blocks-label">
+                <Bindings>
+                    <engine:DataBinding property="SessionType" data-source-path="sessionType" binding-mode="ToTarget" />
+                </Bindings>
+            </Blocks.Sessions.Common.SessionStatusLabel>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

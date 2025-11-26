@@ -1,0 +1,54 @@
+.blocks-modal {
+    background-color: var(--color-modal-background);
+    border-radius: var(--radius-md);
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: var(--padding-lg) var(--padding-xl);
+}
+
+.blocks-modal__close-button {
+    position: absolute;
+    top: var(--padding-lg);
+    right: var(--padding-xl);
+}
+
+.blocks-menu
+{
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-grow: 1;
+}
+
+.blocks-debug-menu
+{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.blocks-menu--left-panel {
+    height: 100%;
+}
+
+.blocks-menu--left-panel > .blocks-modal
+{
+    flex-grow: 1;
+}
+
+.blocks-modal--left-aligned-text {}
+
+.blocks-modal--left-aligned-text .blocks-label,
+.blocks-modal--left-aligned-text .blocks-header {
+    -unity-text-align: middle-left;
+    padding: 0;
+    width: auto;
+}
+

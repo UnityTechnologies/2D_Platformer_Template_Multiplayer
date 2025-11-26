@@ -1,0 +1,15 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement class="blocks-modal">
+        <ui:Label text="JOIN SESSION BY BROWSING" class="blocks-header blocks-header--space-bottom"/>
+        <Blocks.Sessions.CreateSessionElement>
+            <Bindings>
+                <ui:DataBinding property="SessionSettings" binding-mode="ToTarget" data-source-path=""/>
+            </Bindings>
+        </Blocks.Sessions.CreateSessionElement>
+        <Blocks.Sessions.SessionBrowserElement class="blocks-container--stretch">
+            <Bindings>
+                <ui:DataBinding property="SessionSettings" binding-mode="ToTarget" data-source-path=""/>
+            </Bindings>
+        </Blocks.Sessions.SessionBrowserElement>
+    </ui:VisualElement>
+</ui:UXML>

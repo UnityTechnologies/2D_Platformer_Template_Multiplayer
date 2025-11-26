@@ -1,0 +1,63 @@
+:root {
+    /* font and text */
+    --font-sans: "Inter", sans-serif;
+    --text-sm: 14px;
+    --text-md: 18px;
+    --text-lg: 24px;
+    --text-xl: 32px;
+    --letterspacing-md: 2px;
+    --letterspacing-lg: 4px;
+
+    /* colors */
+    --color-modal-background: rgba(16, 16, 16, 0.96);
+    --color-card-background: rgb(31, 31, 31);
+    --color-dropdown-selection-background: rgb(63, 63, 63);
+
+    --color-default: rgb(255, 255, 255);
+    --color-inactive: rgba(255, 255, 255, 0.5);
+    --color-neutral: rgb(171, 171, 171);
+    --color-active: rgb(199, 199, 199);
+    --color-dark-content: rgb(0, 0, 0);
+    --color-border: rgb(66, 66, 66);
+
+    /* spacing and sizing */
+    --base-unit-xs:4px;
+    --base-unit-sm:8px;
+    --base-unit-md:16px;
+    --base-unit-lg:32px;
+    --base-unit-xls:40px;
+    --base-unit-xl:56px;
+    --base-unit-xxl:96px;
+
+    /* paddings */
+    --padding-sm: 8px;
+    --padding-md: 18px;
+    --padding-lg: 32px;
+    --padding-xl: 48px;
+    --padding-xxl: 64px;
+
+    /* margin */
+    --margin-xs: 4px;
+    --margin-sm: 16px;
+    --margin-md: 24px;
+    --margin-lg: 32px;
+    --margin-xl: 48px;
+
+    /* border-radius */
+    --radius-xs: 4px;
+    --radius-sm: 16px;
+    --radius-md: 24px;
+    --radius-lg: 28px;
+    --radius-xl: 32px;
+
+    --width-min-input: 156px;
+    --width-border-md: 2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -unity-font: var(--font-sans);
+    font-size: var(--text-md);
+    letter-spacing: var(--letterspacing-md);
+}

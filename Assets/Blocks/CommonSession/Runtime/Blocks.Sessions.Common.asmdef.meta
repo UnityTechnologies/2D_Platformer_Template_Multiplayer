@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 97271b4cf421601668d136f3ed0c346d
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 341930
+  packageName: Unity Building Block - Multiplayer Session
+  packageVersion: 1.0
+  assetPath: Assets/Blocks/CommonSession/Runtime/Blocks.Sessions.Common.asmdef
+  uploadId: 814574

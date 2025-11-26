@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 579655fa7bd8b4bc5a4166bc19562233
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 341930
+  packageName: Unity Building Block - Multiplayer Session
+  packageVersion: 1.0
+  assetPath: Assets/Blocks/CommonSession/Prefabs/UnityServicesWithName.prefab
+  uploadId: 814574

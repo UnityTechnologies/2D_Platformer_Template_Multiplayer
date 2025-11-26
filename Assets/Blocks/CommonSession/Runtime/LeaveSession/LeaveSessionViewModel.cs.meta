@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 9b15923ac8de40429b36be39da11e1b6
+timeCreated: 1748894877
+AssetOrigin:
+  serializedVersion: 1
+  productId: 341930
+  packageName: Unity Building Block - Multiplayer Session
+  packageVersion: 1.0
+  assetPath: Assets/Blocks/CommonSession/Runtime/LeaveSession/LeaveSessionViewModel.cs
+  uploadId: 814574

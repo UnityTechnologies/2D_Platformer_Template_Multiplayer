@@ -1,5 +1,6 @@
-﻿//#define MULTIPLAYER
-//#define MULTIPLAYER_ANIMATION
+﻿#define MULTIPLAYER
+#define MULTIPLAYER_ANIMATION
+#define MULTIPLAYER_SPRITE_FLIP
 
 using UnityEngine;
 using Platformer.Gameplay;
@@ -7,6 +8,7 @@ using static Platformer.Core.Simulation;
 using Platformer.Model;
 using Platformer.Core;
 using UnityEngine.InputSystem;
+using Unity.Netcode;
 
 namespace Platformer.Mechanics
 {
@@ -51,6 +53,13 @@ namespace Platformer.Mechanics
 
         public Bounds Bounds => collider2d.bounds;
 
+#if MULTIPLAYER_SPRITE_FLIP
+        private NetworkVariable<bool> isFlipped = new (
+            readPerm: NetworkVariableReadPermission.Everyone, 
+            writePerm: NetworkVariableWritePermission.Owner,
+            value: false);
+#endif
+
         void Awake()
         {
             health = GetComponent<Health>();
@@ -62,14 +71,24 @@ namespace Platformer.Mechanics
             animator = GetComponent<ClientNetworkAnimator>().Animator;
 #else
             animator = GetComponent<Animator>();
-#endif
-           
+#endif      
             m_MoveAction = InputSystem.actions.FindAction("Player/Move");
             m_JumpAction = InputSystem.actions.FindAction("Player/Jump");
             
             m_MoveAction.Enable();
             m_JumpAction.Enable();
         }
+
+#if MULTIPLAYER_SPRITE_FLIP
+        public override void OnNetworkSpawn()
+        {
+            // Tell everyone who's not the owner that they should react to sprite flip
+            if (!IsOwner)
+                isFlipped.OnValueChanged += OnIsFlippedChanged; 
+
+            base.OnNetworkSpawn();
+        }
+#endif
 
         protected override void Update()
         {
@@ -147,11 +166,24 @@ namespace Platformer.Mechanics
             else if (move.x < -0.01f)
                 spriteRenderer.flipX = true;
 
+#if MULTIPLAYER_SPRITE_FLIP
+            // Only sync variable if something has changed
+            if (spriteRenderer.flipX != isFlipped.Value)
+                isFlipped.Value = spriteRenderer.flipX;
+#endif
+
             animator.SetBool("grounded", IsGrounded);
             animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
             targetVelocity = move * maxSpeed;
         }
+
+#if MULTIPLAYER_SPRITE_FLIP
+        private void OnIsFlippedChanged(bool oldValue, bool newValue)
+        {
+            spriteRenderer.flipX = newValue;
+        }
+#endif
 
         public enum JumpState
         {

@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="CurrentSession" src="../../../CommonSession/UI/CurrentSession.uxml?fileID=9197481963319205126&amp;guid=6a55f10912d74d3449f68f82c91df9d2&amp;type=3#CurrentSession"/>
+    <ui:Template name="SessionBrowser" src="../../UI/SessionBrowser.uxml?fileID=9197481963319205126&amp;guid=f67ff1032230bd044bd68df85daae0ad&amp;type=3#SessionBrowser"/>
+    <ui:VisualElement data-source="../../Settings/SessionSettings.asset?fileID=11400000&amp;guid=0bf4e1684added44da254017c7fc41b2&amp;type=2#SessionSettings" class="blocks-container--horizontal blocks-container--horizontal--grow">
+        <ui:Instance template="SessionBrowser" class="blocks-element--space-right"/>
+        <ui:Instance template="CurrentSession"/>
+    </ui:VisualElement>
+</ui:UXML>

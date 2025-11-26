@@ -1,0 +1,95 @@
+.blocks-base-achievement {
+    background-color: var(--color-card-background);
+    margin: var(--margin-sm);
+    padding: var(--padding-md);
+    border-radius: var(--radius-sm);
+    border-width: var(--width-border-md);
+    border-color: var(--color-border);
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.blocks-card-component {
+    --width-card: 300px;
+    --height-card: 350px;
+    min-height: var(--height-card);
+    max-height: var(--height-card);
+    min-width: var(--width-card);
+    max-width: var(--width-card);
+}
+
+.blocks-notification-transition {
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.blocks-notification {
+    width: 300px;
+    height: 200px;
+    flex-grow: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.blocks-notification__hidden {
+    translate: 0 250px 0;
+}
+
+.blocks-card-component__title {
+    margin-top: var(--margin-md);
+    margin-bottom: var(--margin-sm);
+    -unity-text-align: middle-center;
+    font-size: var(--text-md);
+    color: var(--color-default);
+    -unity-font-style: bold;
+    white-space: normal;
+}
+
+.blocks-card-component__thumbnail {
+    background-image: url("../textures/thumbnail.png");
+    flex-grow: 1;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.blocks-card-component__description {
+    color: grey;
+    -unity-text-align: middle-center;
+    overflow: initial;
+    white-space: normal;
+    margin-bottom: var(--margin-md);
+}
+
+.blocks-card-component__unlocked-label {
+    -unity-text-align: middle-center;
+    font-size: var(--text-md);
+    color: var(--color-default);
+    -unity-font-style: bold;
+    white-space: normal;
+    margin-bottom: 12px;
+    display: none;
+}
+
+.blocks-card-component__progress-bar {
+    display: flex;
+}
+
+
+.blocks-card-component__progress-bar__top-container {
+    align-items: center;
+    align-self: center;
+    flex-direction: row;
+}
+
+.blocks-scroll-view {
+    flex-grow: 1;
+}
+
+.blocks-grid-view {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    min-height: auto;
+}

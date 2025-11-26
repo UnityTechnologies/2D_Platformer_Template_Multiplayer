@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bc07570770a4fa240b322d7afb29acc4
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 341930
+  packageName: Unity Building Block - Multiplayer Session
+  packageVersion: 1.0
+  assetPath: Assets/Blocks/MultiplayerSession/Scenes/JoinByBrowsing.unity
+  uploadId: 814574

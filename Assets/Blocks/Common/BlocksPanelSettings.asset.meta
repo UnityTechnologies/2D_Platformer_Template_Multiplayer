@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7a38f2dd4a52f3c43802f4f88af54bfe
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 341930
+  packageName: Unity Building Block - Multiplayer Session
+  packageVersion: 1.0
+  assetPath: Assets/Blocks/Common/BlocksPanelSettings.asset
+  uploadId: 814574

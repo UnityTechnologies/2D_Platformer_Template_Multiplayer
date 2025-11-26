@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 6ba500f520b97b346b2521ef36ef885d
+AssetOrigin:
+  serializedVersion: 1
+  productId: 341930
+  packageName: Unity Building Block - Multiplayer Session
+  packageVersion: 1.0
+  assetPath: Assets/Blocks/CommonSession/Runtime/PlayerCount/PlayerCountLabel.cs
+  uploadId: 814574

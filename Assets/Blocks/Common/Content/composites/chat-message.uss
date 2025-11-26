@@ -1,0 +1,12 @@
+:root{
+    padding-top: var(--padding-md);
+    width: 100%;
+}
+
+.blocks-chat-message__text {
+    padding-top: var(--padding-sm);
+    padding-bottom: var(--padding-md);
+    border-bottom-color: var(--color-border);
+    white-space: normal;
+    border-width: var(--width-border-md);
+}
