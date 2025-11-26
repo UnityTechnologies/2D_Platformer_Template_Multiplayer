@@ -51,12 +51,12 @@ namespace Platformer.Mechanics
             Debug.Log($"Triggered with {other.gameObject.name}");
             
             //only exectue OnPlayerEnter if the player collides with this token.
-            var player = other.gameObject.GetComponent<PlayerController_Netcode>();
+            var player = other.gameObject.GetComponent<PlayerController_DemoVersion>();
             if (player != null)
                 OnPlayerEnter(player);
         }
 
-        void OnPlayerEnter(PlayerController_Netcode player)
+        void OnPlayerEnter(PlayerController_DemoVersion player)
         {
             if (isCollected.Value)
                 return;

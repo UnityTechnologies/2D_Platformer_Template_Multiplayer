@@ -1,8 +1,4 @@
-﻿#define MULTIPLAYER
-#define MULTIPLAYER_ANIMATION
-#define MULTIPLAYER_SPRITE_FLIP
-
-using UnityEngine;
+﻿using UnityEngine;
 using Platformer.Gameplay;
 using static Platformer.Core.Simulation;
 using Platformer.Model;
@@ -13,14 +9,13 @@ using Unity.Netcode;
 namespace Platformer.Mechanics
 {
     /// <summary>
+    /// THIS IS THE FINAL VERSION OF THE DEMO SCRIPT WITHOUT ANY OF THE SWITCHES
+    /// USE THIS AS A REFERENCE IF NEEDED
+    /// 
     /// This is the main class used to implement control of the player.
     /// It is a superset of the AnimationController class, but is inlined to allow for any kind of customisation.
     /// </summary>
-#if MULTIPLAYER
-    public class PlayerController1 : KinematicObject_Netcode
-#else
-    public class PlayerController1 : KinematicObject
-#endif
+    public class PlayerController_Complete_Locked : KinematicObject_Netcode
     {
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
@@ -53,12 +48,10 @@ namespace Platformer.Mechanics
 
         public Bounds Bounds => collider2d.bounds;
 
-#if MULTIPLAYER_SPRITE_FLIP
         private NetworkVariable<bool> isFlipped = new (
             readPerm: NetworkVariableReadPermission.Everyone, 
             writePerm: NetworkVariableWritePermission.Owner,
             value: false);
-#endif
 
         void Awake()
         {
@@ -67,11 +60,8 @@ namespace Platformer.Mechanics
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
 
-#if MULTIPLAYER_ANIMATION
             animator = GetComponent<ClientNetworkAnimator>().Animator;
-#else
-            animator = GetComponent<Animator>();
-#endif      
+      
             m_MoveAction = InputSystem.actions.FindAction("Player/Move");
             m_JumpAction = InputSystem.actions.FindAction("Player/Jump");
             
@@ -79,7 +69,6 @@ namespace Platformer.Mechanics
             m_JumpAction.Enable();
         }
 
-#if MULTIPLAYER_SPRITE_FLIP
         public override void OnNetworkSpawn()
         {
             // Tell everyone who's not the owner that they should react to sprite flip
@@ -88,14 +77,12 @@ namespace Platformer.Mechanics
 
             base.OnNetworkSpawn();
         }
-#endif
 
         protected override void Update()
         {
-#if MULTIPLAYER
             if (!IsOwner)
                 return;
-#endif
+
             if (controlEnabled)
             {
                 move.x = m_MoveAction.ReadValue<Vector2>().x;
@@ -166,11 +153,9 @@ namespace Platformer.Mechanics
             else if (move.x < -0.01f)
                 spriteRenderer.flipX = true;
 
-#if MULTIPLAYER_SPRITE_FLIP
             // Only sync variable if something has changed
             if (spriteRenderer.flipX != isFlipped.Value)
                 isFlipped.Value = spriteRenderer.flipX;
-#endif
 
             animator.SetBool("grounded", IsGrounded);
             animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
@@ -178,12 +163,10 @@ namespace Platformer.Mechanics
             targetVelocity = move * maxSpeed;
         }
 
-#if MULTIPLAYER_SPRITE_FLIP
         private void OnIsFlippedChanged(bool oldValue, bool newValue)
         {
             spriteRenderer.flipX = newValue;
         }
-#endif
 
         public enum JumpState
         {
