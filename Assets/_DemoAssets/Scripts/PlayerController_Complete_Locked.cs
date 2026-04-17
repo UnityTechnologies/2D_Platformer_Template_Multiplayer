@@ -5,6 +5,7 @@ using Platformer.Model;
 using Platformer.Core;
 using UnityEngine.InputSystem;
 using Unity.Netcode;
+using Unity.Netcode.Components;
 
 namespace Platformer.Mechanics
 {
@@ -59,9 +60,9 @@ namespace Platformer.Mechanics
             audioSource = GetComponent<AudioSource>();
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
-
-            animator = GetComponent<ClientNetworkAnimator>().Animator;
-      
+            
+            animator = GetComponent<NetworkAnimator>().Animator;
+            
             m_MoveAction = InputSystem.actions.FindAction("Player/Move");
             m_JumpAction = InputSystem.actions.FindAction("Player/Jump");
             

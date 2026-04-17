@@ -9,6 +9,7 @@ using Platformer.Model;
 using Platformer.Core;
 using UnityEngine.InputSystem;
 using Unity.Netcode;
+using Unity.Netcode.Components;
 
 namespace Platformer.Mechanics
 {
@@ -68,7 +69,7 @@ namespace Platformer.Mechanics
             spriteRenderer = GetComponent<SpriteRenderer>();
 
 #if MULTIPLAYER_ANIMATION
-            animator = GetComponent<ClientNetworkAnimator>().Animator;
+            animator = GetComponent<NetworkAnimator>().Animator;
 #else
             animator = GetComponent<Animator>();
 #endif      

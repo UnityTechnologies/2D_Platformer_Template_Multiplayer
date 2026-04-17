@@ -19,8 +19,8 @@ GameObject:
   - component: {fileID: 1933707577250814090}
   - component: {fileID: 7010906933702421597}
   - component: {fileID: 5584973929106690368}
-  - component: {fileID: 628937574596525866}
   - component: {fileID: 935612581207053473}
+  - component: {fileID: 7299990921028805165}
   m_Layer: 7
   m_Name: Player_FinishedState
   m_TagString: Player
@@ -46,6 +46,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3995676898549456277
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -91,6 +92,7 @@ SpriteRenderer:
   m_SortingLayerID: 1907945055
   m_SortingLayer: 0
   m_SortingOrder: 5
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 21300020, guid: ba86c7b200abe499cb750833482830b3, type: 3}
   m_Color: {r: 0.18039216, g: 0.8901961, b: 0.99215686, a: 1}
   m_FlipX: 0
@@ -100,7 +102,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7611072021681033461
 Animator:
@@ -417,21 +418,6 @@ MonoBehaviour:
   SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &628937574596525866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035234001638973627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 833ac134988f2493ca6c983dfae19f9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClientNetworkAnimator
-  ShowTopMostFoldoutHeaderGroup: 1
-  TransitionStateInfoList: []
-  m_Animator: {fileID: 7611072021681033461}
 --- !u!114 &935612581207053473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,6 +435,50 @@ MonoBehaviour:
   UseRigidBodyForMotion: 1
   AutoUpdateKinematicState: 0
   AutoSetKinematicOnDespawn: 0
+--- !u!114 &7299990921028805165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035234001638973627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.Components.NetworkAnimator
+  ShowTopMostFoldoutHeaderGroup: 1
+  NetworkAnimatorExpanded: 0
+  AuthorityMode: 1
+  m_Animator: {fileID: 7611072021681033461}
+  TransitionStateInfoList: []
+  AnimatorParameterEntries:
+    ParameterEntries:
+    - name: velocityX
+      NameHash: 403109329
+      Synchronize: 1
+      ParameterType: 1
+    - name: velocityY
+      NameHash: 1862387015
+      Synchronize: 1
+      ParameterType: 1
+    - name: grounded
+      NameHash: -904282986
+      Synchronize: 1
+      ParameterType: 4
+    - name: hurt
+      NameHash: -947059686
+      Synchronize: 1
+      ParameterType: 9
+    - name: dead
+      NameHash: -316323548
+      Synchronize: 1
+      ParameterType: 4
+    - name: victory
+      NameHash: 1891303514
+      Synchronize: 1
+      ParameterType: 9
+  AnimatorParametersExpanded: 0
 --- !u!1001 &5815536820025969830
 PrefabInstance:
   m_ObjectHideFlags: 0
