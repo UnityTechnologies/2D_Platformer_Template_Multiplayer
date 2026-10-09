@@ -99,17 +99,17 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.tooling": {
-      "version": "1.0.3",
+      "version": "1.0.4",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.2d.common": "12.0.3",
+        "com.unity.2d.common": "12.0.4",
         "com.unity.modules.uielements": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.29",
+      "version": "1.8.30",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -129,7 +129,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collections": {
-      "version": "2.6.7",
+      "version": "2.6.8",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -177,7 +177,7 @@
         "com.unity.2d.tilemap": "1.0.0",
         "com.unity.2d.tilemap.extras": "6.0.3",
         "com.unity.2d.aseprite": "3.0.2",
-        "com.unity.2d.tooling": "1.0.3"
+        "com.unity.2d.tooling": "1.0.4"
       }
     },
     "com.unity.feature.development": {
@@ -212,7 +212,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.19.0",
+      "version": "1.20.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -265,7 +265,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.multiplayer.tools": {
-      "version": "2.2.10",
+      "version": "2.2.12",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -289,7 +289,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.netcode.gameobjects": {
-      "version": "2.13.1",
+      "version": "2.13.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -359,14 +359,14 @@
       }
     },
     "com.unity.searcher": {
-      "version": "4.9.4",
+      "version": "4.9.5",
       "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.services.authentication": {
-      "version": "3.7.1",
+      "version": "3.7.4",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -406,7 +406,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.multiplayer": {
-      "version": "2.3.0",
+      "version": "2.3.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -414,7 +414,7 @@
         "com.unity.collections": "2.6.7",
         "com.unity.services.qos": "1.4.1",
         "com.unity.services.core": "1.18.0",
-        "com.unity.services.wire": "1.4.4",
+        "com.unity.services.wire": "1.5.1",
         "com.unity.services.deployment": "1.7.2",
         "com.unity.nuget.newtonsoft-json": "3.2.2",
         "com.unity.modules.unitywebrequest": "1.0.0",
@@ -436,7 +436,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.vivox": {
-      "version": "16.11.0",
+      "version": "16.12.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -448,7 +448,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.wire": {
-      "version": "1.4.4",
+      "version": "1.5.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -471,11 +471,11 @@
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "17.3.0",
-        "com.unity.searcher": "4.9.3"
+        "com.unity.searcher": "4.9.5"
       }
     },
     "com.unity.splines": {
-      "version": "2.9.0",
+      "version": "2.9.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -528,7 +528,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.transport": {
-      "version": "2.7.3",
+      "version": "2.7.4",
       "depth": 1,
       "source": "registry",
       "dependencies": {
